@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "demo": true,
+    "notice": "全部医生、患者、品牌知识与会话均为虚构演示数据，不连接真实模型、原后台、微信或医疗数据。",
+    "version": "2026.10-demo"
+  },
+  "doctors": {
+    "D001": {
+      "doctor_id": "D001",
+      "name": "张然",
+      "title": "皮肤科医生",
+      "clinic": "云妆皮肤管理中心（演示）"
+    },
+    "D002": {
+      "doctor_id": "D002",
+      "name": "李澄",
+      "title": "皮肤科医生",
+      "clinic": "云妆皮肤管理中心（演示）"
+    }
+  },
+  "brand_admin": {
+    "admin_id": "A001",
+    "name": "王宁",
+    "role": "brand_admin"
+  },
+  "simulated_sessions": {
+    "demo-doctor-d001": {
+      "actor_id": "D001",
+      "role": "doctor"
+    },
+    "demo-doctor-d002": {
+      "actor_id": "D002",
+      "role": "doctor"
+    },
+    "demo-admin-a001": {
+      "actor_id": "A001",
+      "role": "brand_admin"
+    }
+  },
+  "patients": [
+    {
+      "patient_id": "P001",
+      "doctor_id": "D001",
+      "name": "林晓雨",
+      "gender": "女",
+      "age": 29,
+      "phone": "138****0201",
+      "tags": ["敏感肌", "术后修复"],
+      "facts": [
+        {
+          "fact_id": "FACT-P001-001",
+          "source_id": "SRC-P001-ALLERGY",
+          "version": 2,
+          "title": "P001 过敏史与耐受记录",
+          "content": "患者自述对酒精、香精过敏；既往使用含烟酰胺产品耐受。",
+          "keywords": ["过敏", "过敏史", "酒精", "香精", "烟酰胺", "成分"],
+          "origin": "source_record",
+          "archived_at": "2026-09-20T10:00:00+08:00"
+        },
+        {
+          "fact_id": "FACT-P001-002",
+          "source_id": "SRC-P001-CARE",
+          "version": 1,
+          "title": "P001 最近护理记录",
+          "content": "2026-09-12 完成敏感肌舒缓护理，术后第 3 天复诊无红肿。",
+          "keywords": ["护理记录", "上次护理", "复诊", "舒缓", "术后"],
+          "origin": "source_record",
+          "archived_at": "2026-09-15T16:30:00+08:00"
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "patient_id": "P002",
+      "doctor_id": "D001",
+      "name": "陈嘉禾",
+      "gender": "男",
+      "age": 34,
+      "phone": "139****0202",
+      "tags": ["混合肌", "屏障修护"],
+      "facts": [
+        {
+          "fact_id": "FACT-P002-001",
+          "source_id": "SRC-P002-SKIN",
+          "version": 1,
+          "title": "P002 肤质评估",
+          "content": "混合性肌肤，T 区偏油，两颊偏干；无已知成分过敏。",
+          "keywords": ["肤质", "皮肤", "T区", "油", "干", "过敏"],
+          "origin": "source_record",
+          "archived_at": "2026-09-28T11:20:00+08:00"
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "patient_id": "P003",
+      "doctor_id": "D002",
+      "name": "周予安",
+      "gender": "女",
+      "age": 41,
+      "phone": "137****0203",
+      "tags": ["干敏肌", "补水修护"],
+      "facts": [
+        {
+          "fact_id": "FACT-P003-001",
+          "source_id": "SRC-P003-PLAN",
+          "version": 1,
+          "title": "P003 修护方案",
+          "content": "以补水修护为主，避免高浓度酸类；下次复诊评估屏障。",
+          "keywords": ["修护", "补水", "酸类", "方案", "复诊"],
+          "origin": "source_record",
+          "archived_at": "2026-10-08T09:10:00+08:00"
+        }
+      ],
+      "candidates": []
+    }
+  ],
+  "brand_knowledge": [
+    {
+      "source_id": "KB-SKIN-002",
+      "version": 1,
+      "title": "敏感肌护理服务流程（旧版）",
+      "content": "旧版流程仅包含清洁与舒缓两步，已于 2026 年停用。",
+      "keywords": ["敏感肌", "护理", "流程", "旧版"],
+      "status": "retired",
+      "effective_date": "2025-01-01",
+      "updated_at": "2025-12-20T09:00:00+08:00"
+    },
+    {
+      "source_id": "KB-SKIN-002",
+      "version": 2,
+      "title": "敏感肌护理服务流程",
+      "content": "敏感肌护理按「清洁—舒缓—修护」三步执行：先使用温和洁面，再以舒缓精华冷敷 10 分钟，最后用屏障修护乳封层。全程避免酒精、香精与高浓度酸类。",
+      "keywords": ["敏感肌", "护理", "流程", "步骤", "项目", "舒缓", "修护"],
+      "status": "active",
+      "effective_date": "2026-03-01",
+      "updated_at": "2026-03-01T09:00:00+08:00"
+    },
+    {
+      "source_id": "KB-POST-001",
+      "version": 1,
+      "title": "术后修复注意事项",
+      "content": "术后 72 小时内以温和清洁和补水为主，严格防晒，避免桑拿与剧烈运动；如出现持续红肿或渗出，应预约复诊。",
+      "keywords": ["术后", "修复", "护理", "防晒", "红肿", "复诊"],
+      "status": "active",
+      "effective_date": "2026-05-01",
+      "updated_at": "2026-05-01T09:00:00+08:00"
+    },
+    {
+      "source_id": "KB-MEMBER-003",
+      "version": 1,
+      "title": "会员权益说明",
+      "content": "演示会员可享受项目预约提醒与护理后回访；积分兑换以当期活动页公示为准，不承诺固定折扣。",
+      "keywords": ["会员", "权益", "积分", "折扣", "预约"],
+      "status": "active",
+      "effective_date": "2026-06-01",
+      "updated_at": "2026-06-01T09:00:00+08:00"
+    },
+    {
+      "source_id": "KB-MEMBER-001",
+      "version": 1,
+      "title": "会员积分翻倍旧规",
+      "content": "旧版活动曾承诺会员积分翻倍，该规则已停止使用，不得再作为服务承诺。",
+      "keywords": ["旧版", "积分翻倍", "会员", "旧规"],
+      "status": "retired",
+      "effective_date": "2025-02-01",
+      "updated_at": "2025-11-30T09:00:00+08:00"
+    },
+    {
+      "source_id": "KB-INGREDIENT-001",
+      "version": 1,
+      "title": "常见成分与适用肤质",
+      "content": "烟酰胺适合多数肤质，初次使用建议低浓度建立耐受；水杨酸适合油性肌肤，敏感肌需谨慎；玻尿酸主要用于补水。",
+      "keywords": ["成分", "烟酰胺", "水杨酸", "玻尿酸", "肤质", "敏感肌"],
+      "status": "active",
+      "effective_date": "2026-07-01",
+      "updated_at": "2026-07-01T09:00:00+08:00"
+    }
+  ]
+}
